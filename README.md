@@ -1,31 +1,36 @@
-# Flutter Multi-Screen Application Development
+# Flutter Application Development - CRUD API Integration
 
 Student Name: Huzaifa  
 Student ID: SE-221020  
 
 Repository: `huzaifa12-dot/MobAppDevAssignment`  
-Branch: `main`
+Branch: `feature/course-api-integration`
 
 ## Overview
 
-This branch contains Assignment 1: a complete multi-screen Flutter authentication application with registration, login, dashboard, and detail screens.
+This branch contains Assignment 2, extending the authentication application with REST API based CRUD operations for course data.
+
+## API Used
+
+- API: JSONPlaceholder
+- Endpoint: `https://jsonplaceholder.typicode.com/posts`
+- Documentation followed: `https://jsonplaceholder.typicode.com/guide`
 
 ## Features
 
-- Registration with name, email, gender, password, and confirm password.
-- Real-time validation with disabled submit button until valid.
-- Password rules: minimum 6 characters, at least 1 uppercase letter, and at least 1 special character.
-- Reusable validator class separated from UI.
-- Login with email validation, password show/hide toggle, remember me checkbox, and basic session persistence.
-- Dashboard with user name, avatar placeholder, subject list, and detail navigation.
-- Enums for gender and authentication state.
-- Controller/service layer separation.
+- Fetch courses with GET and display ID, title, and description.
+- Loading indicator while fetching.
+- Error and empty states.
+- Add course with POST.
+- Edit course with pre-filled form and PUT.
+- Delete course with DELETE and confirmation dialog.
+- Separate API service layer and Provider controller.
 
 ## Screenshots
 
 ![Login Screen](screenshots/login.svg)
-![Registration Screen](screenshots/register.svg)
 ![Dashboard Screen](screenshots/dashboard.svg)
+![Course Form Screen](screenshots/course_form.svg)
 
 ## Run Project
 

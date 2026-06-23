@@ -1,5 +1,5 @@
 name: mobile_app_dev_assignments
-description: Flutter multi-screen authentication app with validation and navigation.
+description: Flutter authentication app with JSONPlaceholder CRUD API integration.
 publish_to: "none"
 version: 1.0.0+1
 
@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
+  http: ^1.2.2
   provider: ^6.1.2
   shared_preferences: ^2.3.2
 
