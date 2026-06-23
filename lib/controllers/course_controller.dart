@@ -53,6 +53,7 @@ class CourseController extends ChangeNotifier {
         savedCourse.copyWith(id: temporaryCourse.id),
         ...courses.where((course) => course.id != temporaryCourse.id),
       ];
+      await _repository.cacheCourses(courses);
     } catch (error) {
       courses = courses.where((course) => course.id != temporaryCourse.id).toList();
       errorMessage = error.toString();
@@ -72,6 +73,7 @@ class CourseController extends ChangeNotifier {
 
     try {
       await _repository.updateCourse(updatedCourse);
+      await _repository.cacheCourses(courses);
     } catch (error) {
       courses = previousCourses;
       errorMessage = error.toString();
@@ -88,6 +90,7 @@ class CourseController extends ChangeNotifier {
 
     try {
       await _repository.deleteCourse(id);
+      await _repository.cacheCourses(courses);
     } catch (error) {
       courses = previousCourses;
       status = ViewStatus.success;

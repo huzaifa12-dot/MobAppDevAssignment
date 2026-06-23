@@ -9,6 +9,7 @@ import 'screens/login_screen.dart';
 import 'screens/registration_screen.dart';
 import 'services/api/course_api_service.dart';
 import 'services/auth_service.dart';
+import 'services/local/course_local_storage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +25,10 @@ class AssignmentApp extends StatelessWidget {
       providers: [
         Provider(create: (_) => AuthService()),
         Provider(
-          create: (_) => CourseRepository(apiService: CourseApiService()),
+          create: (_) => CourseRepository(
+            apiService: CourseApiService(),
+            localStorage: CourseLocalStorage(),
+          ),
         ),
         ChangeNotifierProvider(
           create: (context) =>
