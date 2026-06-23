@@ -1,6 +1,6 @@
 # Flutter Application Development - CRUD API Integration
 
-Student Name: Huzaifa  
+Student Name: Muhammad Salman  
 Student ID: SE-221020  
 
 Repository: `huzaifa12-dot/MobAppDevAssignment`  
